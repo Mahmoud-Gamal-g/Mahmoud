@@ -1,0 +1,150 @@
+body {
+  background: #fff6e9;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+.app-shell {
+  max-width: 1100px;
+  margin: 30px auto;
+  
+  
+}
+
+/* Top navbar style */
+.top-nav {
+  background: #ffffff;
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  padding: 8px 18px;
+}
+
+.brand-badge {
+  background: #ff6b35;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 4px 10px;
+  margin-right: 8px;
+}
+
+/* Main recipe card */
+.recipe-card {
+  margin-top: 25px;
+  border-radius: 26px;
+  border: none;
+  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.recipe-img-wrapper {
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.recipe-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rating-pill {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: #ffffff;
+  border-radius: 999px;
+  padding: 6px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-size: 0.85rem;
+}
+
+.rating-pill .bi-star-fill {
+  color: #ffb200;
+}
+
+.tab-nav .nav-link {
+  color: #8b8b8b;
+  font-weight: 600;
+  border: none;
+  border-bottom: 3px solid transparent;
+  border-radius: 0;
+  padding-bottom: 8px;
+  margin-right: 18px;
+}
+
+.tab-nav .nav-link.active {
+  color: #ff6b35;
+  border-color: #ff6b35;
+  background: transparent;
+}
+
+.ingredients-list li {
+  background-color: rgb(209, 183, 162);
+}
+
+.ingredients-list li::marker {
+  color: #ff6b35;
+}
+
+/* Info badges (prep time, cook time, serves) */
+.info-pill {
+  background: #fff6e9;
+  border-radius: 16px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.info-pill .icon-circle {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.icon-orange {
+  background: #ff6b35;
+}
+
+.icon-green {
+  background: #00a86b;
+}
+
+.icon-purple {
+  background: #8a5cff;
+}
+
+.btn-primary-custom {
+  background-color: #ff6b35;
+  border-color: #ff6b35;
+}
+
+.btn-primary-custom:hover {
+  background-color: #e35422;
+  border-color: #e35422;
+}
+
+.btn-outline-soft {
+  border-radius: 999px;
+}
+
+@media (max-width: 991.98px) {
+  .recipe-card-body {
+    margin-top: 18px;
+  }
+
+  .top-nav {
+    border-radius: 18px;
+  }
+}

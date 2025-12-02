@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clarity – Modern Landing Page</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="app-shell px-3 px-md-0">
+
+    <!-- Top Navbar -->
+    <div class="top-nav d-flex align-items-center justify-content-between mb-3">
+        <div class="d-flex align-items-center">
+            <span class="brand-badge">
+                <i class="bi bi-egg-fried"></i>
+            </span>
+            <div>
+                <div class="fw-semibold small text-muted">What's For Dinner</div>
+                <div class="fw-bold">Your daily meal inspiration</div>
+            </div>
+        </div>
+
+        <div class="d-flex align-items-center gap-3 ">
+            <button class="btn btn-sm btn-outline-secondary rounded-pill d-none d-md-inline-flex">
+                <i class="bi bi-search me-1"></i> Search
+            </button>
+            <button class="btn btn-sm btn-light rounded-circle">
+                <i class="bi bi-bell"></i>
+            </button>
+            <img src="img/WhatsApp Image 2025-10-12 at 12.04.34 AM.jpeg" class="rounded-circle" width="36" height="36" alt="User" />
+        </div>
+    </div>
+
+    <!-- Main Recipe Card -->
+    <div class="card recipe-card p-3 p-md-4 ">
+<div id="demo" class="container">
+  
+        <div class="row g-4  align-items-stretch">
+
+            <div class="col-lg-5  position-relative">
+              
+                <div class="recipe-img-wrapper h-100 ">
+
+                    <img
+                        src="img/أكلات_جديدة_وسهلة_مصرية.jpg"
+                        alt="Caprese Sandwich"
+                    />
+                </div>
+
+                <!-- Rating pill -->
+                <div class="rating-pill">
+                    <i class="bi bi-star-fill"></i>
+                    <span>4.5</span>
+                    <span class="text-muted">(\~150 reviews)</span>
+                </div>
+            </div>
+
+            <!-- Content column -->
+            <div class="col-lg-7 d-flex flex-column recipe-card-body">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                    <div>
+                        <span class="badge bg-success-subtle text-success mb-2">
+                            Easy &middot; 10 min
+                        </span>
+                        <h2 class="h3 mb-1">Caprese Sandwich</h2>
+                        <p class="text-muted mb-2">
+                            Fresh Italian sandwich with mozzarella, tomato, basil, and balsamic glaze.
+                        </p>
+                    </div>
+                    <div class="d-flex flex-column gap-2">
+                        <button class="btn btn-sm btn-outline-secondary btn-outline-soft">
+                            <i class="bi bi-bookmark"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-secondary btn-outline-soft">
+                            <i class="bi bi-share"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tabs -->
+                <ul class="nav nav-tabs tab-nav mt-2" id="recipeTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button
+                            class="nav-link active"
+                            id="ingredients-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#ingredients"
+                            type="button"
+                            role="tab"
+                        >
+                            Ingredients
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button
+                            class="nav-link"
+                            id="instructions-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#instructions"
+                            type="button"
+                            role="tab"
+                        >
+                            Instructions
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button
+                            class="nav-link"
+                            id="nutrition-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#nutrition"
+                            type="button"
+                            role="tab"
+                        >
+                            Nutrition
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button
+                            class="nav-link"
+                            id="tips-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tips"
+                            type="button"
+                            role="tab"
+                        >
+                            Chef's Tips
+                        </button>
+                    </li>
+                </ul>
+
+                <!-- Tab content -->
+                <div class="tab-content mt-3 flex-grow-1">
+                    <!-- Ingredients -->
+                    <div
+                        class="tab-pane fade show active"
+                        id="ingredients"
+                        role="tabpanel"
+                        aria-labelledby="ingredients-tab"
+                    >
+                        <ul class="ingredients-list ps-3">
+                            <li>1 ciabatta bread</li>
+                            <li>200g fresh mozzarella, sliced</li>
+                            <li>2 large tomatoes, sliced</li>
+                            <li>Fresh basil leaves</li>
+                            <li>2 tablespoons pesto</li>
+                            <li>1 tablespoon balsamic glaze</li>
+                            <li>Olive oil</li>
+                            <li>Salt and pepper</li>
+                        </ul>
+                    </div>
+
+                    <!-- Instructions -->
+                    <div
+                        class="tab-pane fade"
+                        id="instructions"
+                        role="tabpanel"
+                        aria-labelledby="instructions-tab"
+                    >
+                        <ol class="ps-3">
+                            <li>Slice the ciabatta bread in half lengthwise.</li>
+                            <li>Brush both sides lightly with olive oil.</li>
+                            <li>Spread pesto on the bottom half of the bread.</li>
+                            <li>Add mozzarella slices, tomato slices, and fresh basil.</li>
+                            <li>Season with salt and pepper.</li>
+                            <li>Drizzle with balsamic glaze.</li>
+                            <li>Close the sandwich, slice, and serve.</li>
+                        </ol>
+                    </div>
+
+                    <!-- Nutrition -->
+                    <div
+                        class="tab-pane fade"
+                        id="nutrition"
+                        role="tabpanel"
+                        aria-labelledby="nutrition-tab"
+                    >
+                        <table class="table table-sm align-middle mb-0">
+                            <tbody>
+                            <tr>
+                                <th scope="row">Calories</th>
+                                <td>420 kcal</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Protein</th>
+                                <td>18 g</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Carbs</th>
+                                <td>36 g</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Fat</th>
+                                <td>20 g</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Tips -->
+                    <div
+                        class="tab-pane fade"
+                        id="tips"
+                        role="tabpanel"
+                        aria-labelledby="tips-tab"
+                    >
+                        <ul class="ps-3">
+                            <li>Grill the sandwich in a panini press for extra crispiness.</li>
+                            <li>Use heirloom tomatoes for more flavor and color.</li>
+                            <li>Add a slice of prosciutto if you prefer a non‑vegetarian version.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bottom row: info + main buttons -->
+                <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between mt-3 gap-3">
+                    <div class="d-flex flex-wrap gap-2">
+                        <div class="info-pill">
+                            <div class="icon-circle icon-orange">
+                                <i class="bi bi-clock"></i>
+                            </div>
+                            <div>
+                                <div class="small text-muted">Prep Time</div>
+                                <div>10 min</div>
+                            </div>
+                        </div>
+
+                        <div class="info-pill">
+                            <div class="icon-circle icon-green">
+                                <i class="bi bi-fire"></i>
+                            </div>
+                            <div>
+                                <div class="small text-muted">Cook Time</div>
+                                <div>5 min</div>
+                            </div>
+                        </div>
+
+                        <div class="info-pill">
+                            <div class="icon-circle icon-purple">
+                                <i class="bi bi-people"></i>
+                            </div>
+                            <div>
+                                <div class="small text-muted">Serves</div>
+                                <div>2 people</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-wrap gap-2">
+                        <button onclick="changRec()" class="btn btn-primary-custom text-white rounded-pill px-4" id="anotherRecipeBtn">
+                            Try Another Recipe
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+<script src="css/bootstrap.bundle.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
