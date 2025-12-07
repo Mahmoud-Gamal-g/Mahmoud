@@ -36,7 +36,7 @@ const recipes = [
     title: "Chicken Alfredo Pasta",
     rating: 4.8,
     reviews: 421,
-    img:"../img/طريقة_تدميس_الفول_في_المنزل.jpg",
+    img:"./img/طريقة_تدميس_الفول_في_المنزل.jpg",
     prepTime: "20 min",
     cookTime: "30 min",
     servings: 3,
@@ -70,7 +70,7 @@ const recipes = [
     title: "Beef Tacos",
     rating: 4.2,
     reviews: 310,
-    img:"./img/4K-Backgrounds.jpg",
+    img:"./img/طريقة_عمل_الطعمية_بالحمص.jpg",
     prepTime: "10 min",
     cookTime: "15 min",
     servings: 4,
@@ -104,7 +104,7 @@ const recipes = [
     title: "Vegetable Stir Fry",
     rating: 4.6,
     reviews: 189,
-    img:"../img/طريقة_عمل_مسقعة.jpg",
+    img:"./img/طريقة_عمل_مسقعة.jpg",
     prepTime: "15 min",
     cookTime: "10 min",
     servings: 2,
@@ -138,7 +138,7 @@ const recipes = [
     title: "Margherita Pizza",
     rating: 4.9,
     reviews: 502,
-    img:"./images/imgi5_photo.webp",
+    img:"./img/4K-Backgrounds.jpg",
     prepTime: "25 min",
     cookTime: "15 min",
     servings: 2,
@@ -170,11 +170,24 @@ const recipes = [
 ];
 
 
-
+ var oldValue;
 
 function changRec(){
-    console.log("helooooo");
-    
+    var newValue = Math.floor(Math.random()*recipes.length);
+    while(newValue==oldValue){
+        newValue=Math.floor(Math.random()*recipes.length)
+    }
+    oldValue=newValue;
+    var ingredients=""
+    for (let i = 0; i < recipes[newValue].ingredients.length; i++) {
+        ingredients+= `         <li>${i+1} >>>>>>>>>>> ${recipes[newValue].ingredients[i]}</li>`
+        
+    }
+    var instruction=""
+    for (let i = 0; i < recipes[newValue].instruction.length; i++) {
+        instruction+= `         <li>${i+1} >>>>>>>>>>> ${recipes[newValue].instruction[i]}</li>`
+        
+    }
     document.getElementById("demo").innerHTML=`
     <div class="container">
   
@@ -185,7 +198,7 @@ function changRec(){
                 <div class="recipe-img-wrapper h-100 ">
 
                     <img
-                        src=${recipes[2].img}
+                        src=${recipes[newValue].img}
                         alt="Caprese Sandwich"
                     />
                 </div>
@@ -193,7 +206,7 @@ function changRec(){
                 <!-- Rating pill -->
                 <div class="rating-pill">
                     <i class="bi bi-star-fill"></i>
-                    <span>${recipes[2].rating}</span>
+                    <span>${recipes[newValue].rating}</span>
                     <span class="text-muted">(\~150 reviews)</span>
                 </div>
             </div>
@@ -212,7 +225,7 @@ function changRec(){
                     </div>
                     <div class="d-flex flex-column gap-2">
                         <button class="btn btn-sm btn-outline-secondary btn-outline-soft">
-                            <i class="bi bi-bookmark"></i>
+                            <i class="bi bi-bookmark-fill"></i>
                         </button>
                         <button class="btn btn-sm btn-outline-secondary btn-outline-soft">
                             <i class="bi bi-share"></i>
@@ -282,14 +295,7 @@ function changRec(){
                         aria-labelledby="ingredients-tab"
                     >
                         <ul class="ingredients-list ps-3">
-                            <li>${recipes[2].ingredients}</li>
-                            <li>200g fresh mozzarella, sliced</li>
-                            <li>2 large tomatoes, sliced</li>
-                            <li>Fresh basil leaves</li>
-                            <li>2 tablespoons pesto</li>
-                            <li>1 tablespoon balsamic glaze</li>
-                            <li>Olive oil</li>
-                            <li>Salt and pepper</li>
+${ingredients}
                         </ul>
                     </div>
 
@@ -301,13 +307,7 @@ function changRec(){
                         aria-labelledby="instructions-tab"
                     >
                         <ol class="ps-3">
-                            <li>${recipes[2].instruction}</li>
-                            <li>Brush both sides lightly with olive oil.</li>
-                            <li>Spread pesto on the bottom half of the bread.</li>
-                            <li>Add mozzarella slices, tomato slices, and fresh basil.</li>
-                            <li>Season with salt and pepper.</li>
-                            <li>Drizzle with balsamic glaze.</li>
-                            <li>Close the sandwich, slice, and serve.</li>
+${instruction}
                         </ol>
                     </div>
 
